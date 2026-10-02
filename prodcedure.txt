@@ -1,0 +1,10 @@
+first step: npm create vite@latest frontend
+
+cd frontend
+npm install
+npm run dev
+
+
+
+cd backend
+npm init -y

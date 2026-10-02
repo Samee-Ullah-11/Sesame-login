@@ -1,0 +1,283 @@
+/* body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.login-container {
+  width: 350px;
+  margin: 100px auto;
+}
+
+.login-container h1 {
+  text-align: center;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin: 4px 0;
+} */
+
+/* Reset & Background Setup */
+/* Reset & Standard Box Model */
+/* Reset & Standard Box Model */
+/* Reset & Standard Setup */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Page Layout & Background Ambient Effects */
+.page-wrapper {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0b0f19;
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+/* Ambient Glowing Background Orbs */
+.glow-1 {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(212, 163, 89, 0.25) 0%, rgba(0, 0, 0, 0) 70%);
+  top: 10%;
+  left: 20%;
+  pointer-events: none;
+}
+
+.glow-2 {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(30, 41, 59, 0.8) 0%, rgba(0, 0, 0, 0) 70%);
+  bottom: 10%;
+  right: 20%;
+  pointer-events: none;
+}
+
+/* Glassmorphism Card Container */
+.login-card {
+  position: relative;
+  z-index: 10;
+  background: rgba(18, 24, 38, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 440px;
+  padding: 2.5rem 2.25rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+/* Custom Top Gold Accent Bar */
+.card-top-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #d4a359 0%, #f3e5ab 50%, #d4a359 100%);
+}
+
+/* Brand Header Formatting */
+.brand-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 0.75rem auto;
+  background: rgba(212, 163, 89, 0.1);
+  border: 1px solid rgba(212, 163, 89, 0.3);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.brand-name {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  color: #d4a359;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.brand-header h1 {
+  font-size: 1.75rem;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.subtext {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin-top: 0.35rem;
+}
+
+/* Inputs & Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.9rem 1.1rem;
+  background: rgba(11, 15, 25, 0.6);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #ffffff;
+  outline: none;
+  transition: all 0.25 ease;
+}
+
+input::placeholder {
+  color: #64748b;
+}
+
+input:focus {
+  border-color: #d4a359;
+  background: rgba(11, 15, 25, 0.9);
+  box-shadow: 0 0 15px rgba(212, 163, 89, 0.2);
+}
+
+/* Error States */
+.error {
+  color: #f43f5e;
+  font-size: 0.8rem;
+  text-align: left;
+  padding-left: 0.2rem;
+}
+/* Brand Logo Image Container */
+.brand-logo-container {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1rem auto;
+  border-radius: 50%;
+  padding: 8px;
+  background: #ffffff; /* White background to contrast the black logo artwork */
+  border: 2px solid #d4a359;
+  box-shadow: 0 0 20px rgba(212, 163, 89, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.brand-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.api-error {
+  background-color: rgba(244, 63, 94, 0.1);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+  color: #fda4af;
+  padding: 0.75rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+/* Primary Action Button */
+.submit-btn {
+  width: 100%;
+  padding: 0.95rem;
+  background: linear-gradient(135deg, #d4a359 0%, #b8860b 100%);
+  color: #0b0f19;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(212, 163, 89, 0.3);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 163, 89, 0.45);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Footer Section */
+.toggle-footer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #d4a359;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.toggle-btn:hover {
+  color: #f3e5ab;
+  text-decoration: underline;
+}
+
+/* Responsive Scaling */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .brand-header h1 {
+    font-size: 1.5rem;
+  }
+}
